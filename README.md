@@ -17,8 +17,8 @@ I have prepared an [CDK](https://docs.aws.amazon.com/cdk/latest/guide/home.html)
 
 #### Deploy the stacks
 1. `cd deployment/aws` Go to the directory with the stacks
-2. `cdk synth GlueDemoStack` Generates CloudFormation template
-3. `cdk deploy GlueDemoStack` Deploy the stacks into your account
+2. `cdk synth GlueDemoInfraStack` Generates CloudFormation template
+3. `cdk deploy GlueDemoInfraStack` Deploy the stacks into your account
 
 ### Setup MongoDB Atlas
 Inside the directory `deployment/atlas` is Terraform templates for deploying a MongoDB Atlas project and cluster with VPC Peering enabled. You can also deploy the same environment using the Atlas Console. If you wonder how to setup API key for Terraform, refer to [here](https://docs.atlas.mongodb.com/tutorial/manage-programmatic-access/), and [this tutorial on creating Atlas cluster with VPC Peering](https://www.youtube.com/watch?v=PBa2uj4TG4I)
@@ -72,9 +72,9 @@ Glue already has the [MongoDB Spark Connector](https://docs.mongodb.com/spark-co
 
     `cd ../../deployment/aws`
 
-    `cdk synth GlueDemoDevStack`
+    `cdk synth GlueDemoEndpointStack`
 
-    `cdk deploy GlueDemoDevStack`
+    `cdk deploy GlueDemoEndpointStack`
 
 
 2. Now we can go to [Glue Conosle](https://us-west-2.console.aws.amazon.com/glue/home?region=us-west-2#etl:tab=notebooks) and create a notebook server using the newly created endpoint <em>(sadly there is no way to that with CloudFormation as of now)</em>
