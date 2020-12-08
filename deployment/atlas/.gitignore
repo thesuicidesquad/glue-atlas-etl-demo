@@ -1,0 +1,6 @@
+.key
+atlas.tfvars
+.tfstate
+terraform.tfstate
+.terraform
+plugins

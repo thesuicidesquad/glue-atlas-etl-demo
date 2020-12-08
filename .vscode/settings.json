@@ -1,0 +1,4 @@
+{
+    "cloud9sync.syncStrategy": "bidirectional",
+    "jupyter.jupyterServerType": "remote"
+}
